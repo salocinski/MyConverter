@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
@@ -18,6 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 import Extension.Onglets;
+import Extension.RechercheClasse;
 
 public class Converter extends JFrame
 {
@@ -54,10 +56,21 @@ public class Converter extends JFrame
 			/*---------- Gestion des onglets ----------*/
 		
 			/*---------- Création du contenu de l'onglet d'accueil ----------*/
-		ArrayList <String> listeConversion = new ArrayList <String> ();
-		listeConversion.add("Température");
-		listeConversion.add("Distance");
-		listeConversion.add("Poids");
+		ArrayList <Class> listeConversion = new ArrayList <Class> ();
+		
+		RechercheClasse classe = new RechercheClasse();
+		try
+		{
+			listeConversion = (ArrayList<Class>) classe.getClasses("Convertisseur");
+		}
+		catch (ClassNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
 		
 		JComboBox liste = new JComboBox();
 		liste.setPreferredSize(new Dimension(100, 20));
@@ -69,7 +82,12 @@ public class Converter extends JFrame
 		
 		for (int i = 0; i < listeConversion.size(); i++)
 		{
-			liste.addItem(listeConversion.get(i));
+			String unite = listeConversion.get(i).toString();
+			
+			String [] tabUnite = unite.split("\\.");
+			unite = tabUnite[1];
+
+			liste.addItem(unite);
 		}
 			/*---------- Création de la liste déroulante ----------*/
 		JButton valider = new JButton("Valider");
@@ -118,9 +136,10 @@ public class Converter extends JFrame
 			public void actionPerformed(ActionEvent action)
 			{
 				int idListe = liste.getSelectedIndex();
+				String nomSelection = liste.getSelectedItem().toString();
 				
 				Onglets nouvelOnglet = new Onglets();
-				nouvelOnglet.creerOnglets(onglets, idListe);
+				nouvelOnglet.creerOnglets(onglets, idListe, nomSelection);
 			}
 		});
 		

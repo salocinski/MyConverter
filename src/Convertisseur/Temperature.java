@@ -1,12 +1,22 @@
-package Class;
+package Convertisseur;
 
 public class Temperature
 {
 	private double valeur;
+	private String [] uniteConversion = {"Celsius", "Fahrenheit", "Kelvin", "Rankine"};
 	
 	public Temperature(double valeur)
 	{
 		this.valeur = valeur;
+	}
+	public Temperature()
+	{
+		this.uniteConversion = uniteConversion;
+	}
+	
+	public String [] getUniteConversion()
+	{
+		return uniteConversion;
 	}
 	//----------------------- CONVERSION CELSIUS -----------------------
 	public double celsiusToFahrenheit()
