@@ -135,11 +135,10 @@ public class Converter extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent action)
 			{
-				int idListe = liste.getSelectedIndex();
 				String nomSelection = liste.getSelectedItem().toString();
 				
 				Onglets nouvelOnglet = new Onglets();
-				nouvelOnglet.creerOnglets(onglets, idListe, nomSelection);
+				nouvelOnglet.creerOnglets(onglets, nomSelection);
 			}
 		});
 		

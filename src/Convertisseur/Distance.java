@@ -3,7 +3,7 @@ package Convertisseur;
 public class Distance
 {
 	private double valeur;
-	private String [] uniteConversion = {"Kilomètre", "Hectomètre", "Décamètre", "Mètre", "Décimètre", "Centimètre", "Millimètre", "Inch (pouce)", "Foot (pied)", "Yard (verge)"};
+	private String [] uniteConversion = {"Kilomètre", "Hectomètre", "Décamètre", "Mètre", "Décimètre", "Centimètre", "Millimètre", "Pouce", "Pied", "Yard"};
 	
 	public Distance(double valeur)
 	{
@@ -20,223 +20,243 @@ public class Distance
 		return uniteConversion;
 	}	
 	//----------------------- CONVERSION KILOMETRE -----------------------	
-	public double kmToHm()
+	public double kilometreToKilometre()
 	{
-		double resultat = this.mToHm()*1000;
+		return valeur;
+	}
+	
+	public double kilometreToHectometre()
+	{
+		double resultat = this.metreToHectometre()*1000;
 		return resultat;
 	}
 	
-	public double kmToDam()
+	public double kilometreToDecametre()
 	{
-		double resultat = this.mToDam()*1000;
+		double resultat = this.metreToDecametre()*1000;
 		return resultat;
 	}
 	
-	public double kmToM()
+	public double kilometreToMetre()
 	{
 		double conversion = valeur * 1000;
 		return conversion;
 	}
 	
-	public double kmToDm()
+	public double kilometreToDecimetre()
 	{
-		double resultat = this.mToDm()*1000;
+		double resultat = this.metreToDecimetre()*1000;
 		return resultat;
 	}
 	
-	public double kmToCm()
+	public double kilometreToCentimetre()
 	{
-		double resultat = this.mToCm()*1000;
+		double resultat = this.metreToCentimetre()*1000;
 		return resultat;
 	}
 	
-	public double kmToMm()
+	public double kilometreToMillimetre()
 	{
-		double resultat = this.mToMm()*1000;
+		double resultat = this.metreToMillimetre()*1000;
 		return resultat;
 	}
 	
-	public double kmToIn()
+	public double kilometreToPouce()
 	{
-		double resultat = this.mToIn()*1000;
+		double resultat = this.metreToPouce()*1000;
 		return resultat;
 	}
 	
-	public double kmToFt()
+	public double kilometreToPied()
 	{
-		double resultat = this.mToFt()*1000;
+		double resultat = this.metreToPied()*1000;
 		return resultat;
 	}
 	
-	public double kmToYd()
+	public double kilometreToYard()
 	{
-		double resultat = this.mToYd()*1000;
+		double resultat = this.metreToYard()*1000;
 		return resultat;
 	}
 	//----------------------- CONVERSION KILOMETRE -----------------------
 	
 	//----------------------- CONVERSION HECTOMETRE -----------------------
-	public double hmToKm()
+	public double hectometreToKilometre()
 	{
-		double resultat = this.mToKm()*100;
+		double resultat = this.metreToKilometre()*100;
 		return resultat;
 	}
 	
-	public double hmToDam()
+	public double hectometreToHectometre()
 	{
-		double resultat = this.mToDam()*100;
+		return valeur;
+	}
+	
+	public double hectometreToDecametre()
+	{
+		double resultat = this.metreToDecametre()*100;
 		return resultat;
 	}
 	
-	public double hmToM()
+	public double hectometreToMetre()
 	{
 		double conversion = valeur * 100;
 		return conversion;
 	}
 	
-	public double hmToDm()
+	public double hectometreToDecimetre()
 	{
-		double resultat = this.mToDm()*100;
+		double resultat = this.metreToDecimetre()*100;
 		return resultat;
 	}
 	
-	public double hmToCm()
+	public double hectometreToCentimetre()
 	{
-		double resultat = this.mToCm()*100;
+		double resultat = this.metreToCentimetre()*100;
 		return resultat;
 	}
 	
-	public double hmToMm()
+	public double hectometreToMillimetre()
 	{
-		double resultat = this.mToMm()*100;
+		double resultat = this.metreToMillimetre()*100;
 		return resultat;
 	}
 	
-	public double hmToIn()
+	public double hectometreToPouce()
 	{
-		double resultat = this.mToIn()*100;
+		double resultat = this.metreToPouce()*100;
 		return resultat;
 	}
 	
-	public double hmToFt()
+	public double hectometreToPied()
 	{
-		double resultat = this.mToFt()*100;
+		double resultat = this.metreToPied()*100;
 		return resultat;
 	}
 	
-	public double hmToYd()
+	public double hectometreToYard()
 	{
-		double resultat = this.mToYd()*100;
+		double resultat = this.metreToYard()*100;
 		return resultat;
 	}
 	//----------------------- CONVERSION HECTOMETRE -----------------------
 		
 	//----------------------- CONVERSION DECAMETRE -----------------------
-	public double damToKm()
+	public double decametreToKilometre()
 	{
-		double resultat = this.mToKm()*10;
+		double resultat = this.metreToKilometre()*10;
 		return resultat;
 	}
 	
-	public double damToHm()
+	public double decametreToHectometre()
 	{
-		double resultat = this.mToHm()*10;
+		double resultat = this.metreToHectometre()*10;
 		return resultat;
 	}
 	
-	public double damToM()
+	public double decametreToDecametre()
+	{
+		return valeur;
+	}
+	
+	public double decametreToMetre()
 	{
 		double conversion = valeur * 10;
 		return conversion;
 	}
 	
-	public double damToDm()
+	public double decametreToDecimetre()
 	{
-		double resultat = this.mToDm()*10;
+		double resultat = this.metreToDecimetre()*10;
 		return resultat;
 	}
 	
-	public double damToCm()
+	public double decametreToCentimetre()
 	{
-		double resultat = this.mToCm()*10;
+		double resultat = this.metreToCentimetre()*10;
 		return resultat;
 	}
 	
-	public double damToMm()
+	public double decametreToMillimetre()
 	{
-		double resultat = this.mToMm()*10;
+		double resultat = this.metreToMillimetre()*10;
 		return resultat;
 	}
 	
-	public double damToIn()
+	public double decametreToPouce()
 	{
-		double resultat = this.mToIn()*10;
+		double resultat = this.metreToPouce()*10;
 		return resultat;
 	}
 	
-	public double damToFt()
+	public double decametreToPied()
 	{
-		double resultat = this.mToFt()*10;
+		double resultat = this.metreToPied()*10;
 		return resultat;
 	}
 	
-	public double damToYd()
+	public double decametreToYard()
 	{
-		double resultat = this.mToYd()*10;
+		double resultat = this.metreToYard()*10;
 		return resultat;
 	}
 	//----------------------- CONVERSION DECAMETRE -----------------------
 		
 	//----------------------- CONVERSION METRE -----------------------
-	public double mToKm()
+	public double metreToKilometre()
 	{
 		double conversion = valeur / 1000;
 		return conversion;
 	}
 	
-	public double mToHm()
+	public double metreToHectometre()
 	{
 		double conversion = valeur / 100;
 		return conversion;
 	}
 	
-	public double mToDam()
+	public double metreToDecametre()
 	{
 		double conversion = valeur / 10;
 		return conversion;
 	}
 	
-	public double mToDm()
+	public double metreToDecimetre()
 	{
 		double conversion = valeur * 10;
 		return conversion;
 	}
 	
-	public double mToCm()
+	public double metreToMetre()
+	{
+		return valeur;
+	}
+	
+	public double metreToCentimetre()
 	{
 		double conversion = valeur * 100;
 		return conversion;
 	}
 	
-	public double mToMm()
+	public double metreToMillimetre()
 	{
 		double conversion = valeur * 1000;
 		return conversion;
 	}
 	
-	public double mToIn()
+	public double metreToPouce()
 	{
 		double conversion = valeur * 39.37;
 		return conversion;
 	}
 	
-	public double mToFt()
+	public double metreToPied()
 	{
 		double conversion = valeur * 3.2808;
 		return conversion;
 	}
 	
-	public double mToYd()
+	public double metreToYard()
 	{
 		double conversion = valeur * 1.093613;
 		return conversion;
@@ -244,229 +264,243 @@ public class Distance
 	//----------------------- CONVERSION METRE -----------------------
 	
 	//----------------------- CONVERSION DECIMETRE -----------------------
-	public double dmToKm()
+	public double decimetreToKilometre()
 	{
-		double resultat = this.mToKm()/10;
+		double resultat = this.metreToKilometre()/10;
 		return resultat;
 	}
 	
-	public double dmToHm()
+	public double decimetreToHectometre()
 	{
-		double resultat = this.mToHm()/10;
+		double resultat = this.metreToHectometre()/10;
 		return resultat;
 	}
 	
-	public double dmToDam()
+	public double decimetreToDecametre()
 	{
-		double resultat = this.mToDam()/10;
+		double resultat = this.metreToDecametre()/10;
 		return resultat;
 	}
 	
-	public double dmToM()
+	public double decimetreToMetre()
 	{
 		double conversion = valeur /10;
 		return conversion;
 	}
 	
-	public double dmToDm()
+	public double decimetreToDecimetre()
 	{
-		double resultat = this.mToDm()/10;
+		return valeur;
+	}
+	
+	public double decimetreToCentimetre()
+	{
+		double resultat = this.metreToCentimetre()/10;
 		return resultat;
 	}
 	
-	public double dmToCm()
+	public double decimetreToMillimetre()
 	{
-		double resultat = this.mToCm()/10;
+		double resultat = this.metreToMillimetre()/10;
 		return resultat;
 	}
 	
-	public double dmToMm()
+	public double decimetreToPouce()
 	{
-		double resultat = this.mToMm()/10;
+		double resultat = this.metreToPouce()/10;
 		return resultat;
 	}
 	
-	public double dmToIn()
+	public double decimetreToPied()
 	{
-		double resultat = this.mToIn()/10;
+		double resultat = this.metreToPied()/10;
 		return resultat;
 	}
 	
-	public double dmToFt()
+	public double decimetreToYard()
 	{
-		double resultat = this.mToFt()/10;
-		return resultat;
-	}
-	
-	public double dmToYd()
-	{
-		double resultat = this.mToYd()/10;
+		double resultat = this.metreToYard()/10;
 		return resultat;
 	}
 	//----------------------- CONVERSION DECIMETRE -----------------------
 	
 	//----------------------- CONVERSION CENTIMETRE -----------------------
-	public double cmToKm()
+	public double centimetreToKilometre()
 	{
-		double resultat = this.mToKm()/100;
+		double resultat = this.metreToKilometre()/100;
 		return resultat;
 	}
 	
-	public double cmToHm()
+	public double centimetreToHectometre()
 	{
-		double resultat = this.mToHm()/100;
+		double resultat = this.metreToHectometre()/100;
 		return resultat;
 	}
 	
-	public double cmToDam()
+	public double centimetreToDecametre()
 	{
-		double resultat = this.mToDam()/100;
+		double resultat = this.metreToDecametre()/100;
 		return resultat;
 	}
 	
-	public double cmToM()
+	public double centimetreToMetre()
 	{
 		double conversion = valeur /100;
 		return conversion;
 	}
 	
-	public double cmToDm()
+	public double centimetreToDecimetre()
 	{
-		double resultat = this.mToDm()/100;
+		double resultat = this.metreToDecimetre()/100;
 		return resultat;
+	}
+	
+	public double centimetreToCentimetre()
+	{
+		return valeur;
 	}
 
-	public double cmToMm()
+	public double centimetreToMillimetre()
 	{
-		double resultat = this.mToMm()/100;
+		double resultat = this.metreToMillimetre()/100;
 		return resultat;
 	}
 	
-	public double cmToIn()
+	public double centimetreToPouce()
 	{
-		double resultat = this.mToIn()/100;
+		double resultat = this.metreToPouce()/100;
 		return resultat;
 	}
 	
-	public double cmToFt()
+	public double centimetreToPied()
 	{
-		double resultat = this.mToFt()/100;
+		double resultat = this.metreToPied()/100;
 		return resultat;
 	}
 	
-	public double cmToYd()
+	public double centimetreToYard()
 	{
-		double resultat = this.mToYd()/100;
+		double resultat = this.metreToYard()/100;
 		return resultat;
 	}
 	//----------------------- CONVERSION CENTIMETRE -----------------------
 	
 	//----------------------- CONVERSION MILLIMETRE -----------------------
-	public double mmToKm()
+	public double millimetreToKilometre()
 	{
-		double resultat = this.mToKm()/1000;
+		double resultat = this.metreToKilometre()/1000;
 		return resultat;
 	}
 	
-	public double mmToHm()
+	public double millimetreToHectometre()
 	{
-		double resultat = this.mToHm()/1000;
+		double resultat = this.metreToHectometre()/1000;
 		return resultat;
 	}
 	
-	public double mmToDam()
+	public double millimetreToDecametre()
 	{
-		double resultat = this.mToDam()/1000;
+		double resultat = this.metreToDecametre()/1000;
 		return resultat;
 	}
 	
-	public double mmToM()
+	public double millimetreToMetre()
 	{
 		double conversion = valeur /1000;
 		return conversion;
 	}
 	
-	public double mmToDm()
+	public double millimetreToDecimetre()
 	{
-		double resultat = this.mToDm()/1000;
+		double resultat = this.metreToDecimetre()/1000;
 		return resultat;
 	}
 	
-	public double mmToCm()
+	public double millimetreToCentimetre()
 	{
-		double resultat = this.mToCm()/1000;
+		double resultat = this.metreToCentimetre()/1000;
 		return resultat;
 	}
 	
-	public double mmToIn()
+	public double millimetreToMillimetre()
 	{
-		double resultat = this.mToIn()/1000;
+		return valeur;
+	}
+	
+	public double millimetreToPouce()
+	{
+		double resultat = this.metreToPouce()/1000;
 		return resultat;
 	}
 	
-	public double mmToFt()
+	public double millimetreToPied()
 	{
-		double resultat = this.mToFt()/1000;
+		double resultat = this.metreToPied()/1000;
 		return resultat;
 	}
 	
-	public double mmToYd()
+	public double millimetreToYard()
 	{
-		double resultat = this.mToYd()/1000;
+		double resultat = this.metreToYard()/1000;
 		return resultat;
 	}
 	//----------------------- CONVERSION CENTIMETRE -----------------------
 	
 	//----------------------- CONVERSION POUCE (INCH) -----------------------
-	public double inToKm()
+	public double pouceToKilometre()
 	{
-		double resultat = inToM()/1000;
+		double resultat = pouceToMetre()/1000;
 		return resultat;
 	}
 	
-	public double inToHm()
+	public double pouceToHectometre()
 	{
-		double resultat = inToM()/100;
+		double resultat = pouceToMetre()/100;
 		return resultat;
 	}
 	
-	public double inToDam()
+	public double pouceToDecametre()
 	{
-		double resultat = inToM()/10;
+		double resultat = pouceToMetre()/10;
 		return resultat;
 	}
 	
-	public double inToM()
+	public double pouceToMetre()
 	{
 		double resultat = valeur * 0.0254;
 		return resultat;
 	}
 	
-	public double inToDm()
+	public double pouceToDecimetre()
 	{
-		double resultat = inToM()*10;
+		double resultat = pouceToMetre()*10;
 		return resultat;
 	}
 	
-	public double inToCm()
+	public double pouceToCentimetre()
 	{
-		double resultat = inToM()*100;
+		double resultat = pouceToMetre()*100;
 		return resultat;
 	}
 	
-	public double inToMm()
+	public double pouceToMillimetre()
 	{
-		double resultat = inToM()*1000;
+		double resultat = pouceToMetre()*1000;
 		return resultat;
 	}
 	
-	public double inToFt()
+	public double pouceToPied()
 	{
 		double resultat = valeur * 0.0833333;
 		return resultat;
 	}
 	
-	public double inToYd()
+	public double pouceToPouce()
+	{
+		return valeur;
+	}
+	
+	public double pouceToYard()
 	{
 		double resultat = valeur * 0.0277778;
 		return resultat;
@@ -474,55 +508,60 @@ public class Distance
 	//----------------------- CONVERSION POUCE (INCH) -----------------------
 	
 	//----------------------- CONVERSION PIED (FOOT) -----------------------
-	public double ftToKm()
+	public double piedToKilometre()
 	{
-		double resultat = inToM()/1000;
+		double resultat = piedToMetre()/1000;
 		return resultat;
 	}
 	
-	public double ftToHm()
+	public double piedToHectometre()
 	{
-		double resultat = inToM()/100;
+		double resultat = piedToMetre()/100;
 		return resultat;
 	}
 	
-	public double ftToDam()
+	public double piedToDecametre()
 	{
-		double resultat = inToM()/10;
+		double resultat = piedToMetre()/10;
 		return resultat;
 	}
 	
-	public double ftToM()
+	public double piedToMetre()
 	{
 		double resultat = valeur * 0.3048;
 		return resultat;
 	}
 	
-	public double ftToDm()
+	public double piedToDecimetre()
 	{
-		double resultat = inToM()*10;
+		double resultat = piedToMetre()*10;
 		return resultat;
 	}
 	
-	public double ftToCm()
+	public double piedToCentimetre()
 	{
-		double resultat = inToM()*100;
+		double resultat = piedToMetre()*100;
 		return resultat;
 	}
 	
-	public double ftToMm()
+	public double piedToMillimetre()
 	{
-		double resultat = inToM()*1000;
+		double resultat = piedToMetre()*1000;
 		return resultat;
 	}
 	
-	public double ftToIn()
+	public double piedToPouce()
 	{
 		double resultat = valeur * 12;
 		return resultat;
 	}
 	
-	public double ftToYd()
+	public double piedToPied()
+	{
+		return valeur;
+	}
+	
+	public double piedToYard()
 	{
 		double resultat = valeur * 0.333333;
 		return resultat;
@@ -530,58 +569,63 @@ public class Distance
 	//----------------------- CONVERSION PIED (FOOT) -----------------------
 	
 	//----------------------- CONVERSION YARD (VERGE) -----------------------
-	public double ydToKm()
+	public double yardToKilometre()
 	{
-		double resultat = inToM()/1000;
+		double resultat = yardToMetre()/1000;
 		return resultat;
 	}
 	
-	public double ydToHm()
+	public double yardToHectometre()
 	{
-		double resultat = inToM()/100;
+		double resultat = yardToMetre()/100;
 		return resultat;
 	}
 	
-	public double ydToDam()
+	public double yardToDecametre()
 	{
-		double resultat = inToM()/10;
+		double resultat = yardToMetre()/10;
 		return resultat;
 	}
 	
-	public double ydToM()
+	public double yardToMetre()
 	{
 		double resultat = valeur * 0.9144;
 		return resultat;
 	}
 	
-	public double ydToDm()
+	public double yardToDecimetre()
 	{
-		double resultat = inToM()*10;
+		double resultat = yardToMetre()*10;
 		return resultat;
 	}
 	
-	public double ydToCm()
+	public double yardToCentimetre()
 	{
-		double resultat = inToM()*100;
+		double resultat = yardToMetre()*100;
 		return resultat;
 	}
 	
-	public double ydToMm()
+	public double yardToMillimetre()
 	{
-		double resultat = inToM()*1000;
+		double resultat = yardToMetre()*1000;
 		return resultat;
 	}
 	
-	public double ydToIn()
+	public double yardToPouce()
 	{
 		double resultat = valeur * 36;
 		return resultat;
 	}
 	
-	public double ydToFt()
+	public double yardToPied()
 	{
 		double resultat = valeur * 3;
 		return resultat;
+	}
+	
+	public double yardToYard()
+	{
+		return valeur;
 	}
 	//----------------------- CONVERSION YARD (VERGE) -----------------------
 }
