@@ -10,8 +10,7 @@ L'application est entièrement automatisée et peut être facilement alimentée 
 - L'ensemble des méthodes permettant l'inter-conversion des unités entre elles en respectant le schéma suivant :
   - public double nomUniteDepart+"To"+nomUniteConversion () {…}
 
------ Je vous invite à prendre pour exemple les classes « Température », « Poids », « Distance » -----
------ pour construire efficacement les nouveaux convertisseurs -----
+----- Je vous invite à prendre pour exemple les classes « Température », « Poids », « Distance » pour construire efficacement les nouveaux convertisseurs -----
   
 Il suffira d'ajouter la nouvelle classe à l'intérieur du package "Convertisseur" et le système automatisera : 
 
