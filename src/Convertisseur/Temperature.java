@@ -4,11 +4,8 @@ public class Temperature
 {
 	private double valeur;
 	private String [] uniteConversion = {"Celsius", "Fahrenheit", "Kelvin", "Rankine"};
-	
-	public Temperature(double valeur)
-	{
-		this.valeur = valeur;
-	}
+	private String uniteBase = "Celsius";
+
 	public Temperature()
 	{
 		this.uniteConversion = uniteConversion;
@@ -18,103 +15,59 @@ public class Temperature
 	{
 		return uniteConversion;
 	}
-	//----------------------- CONVERSION CELSIUS -----------------------
-	public double celsiusToCelsius()
+	
+	public String getUniteBase()
 	{
-		return valeur;
+		return uniteBase;
 	}
 	
-	public double celsiusToFahrenheit()
+	public void setValeur(double valeur)
 	{
-		double conversion = this.valeur * 9/5 + 32;
-		return conversion;
+		this.valeur = valeur;
 	}
 	
-	public double celsiusToKelvin()
-	{
-		double conversion = this.valeur + 273.15;
-		return conversion;
-	}
-	
-	public double celsiusToRankine()
-	{
-		double conversion = (this.valeur + 273.15) * 9/5;
-		return conversion;
-	}
-	//----------------------- CONVERSION CELSIUS -----------------------
-	
-	//----------------------- CONVERSION FAHRENHEIT -----------------------
-	public double fahrenheitToCelsius()
+	//----------------------- CONVERSION uniteDepart => uniteBase -----------------------
+	public double fahrenheitTOcelsius()
 	{
 		double conversion = (this.valeur - 32) * 5/9;
 		return conversion;
 	}
 	
-	public double fahrenheitToFahrenheit()
-	{
-		return valeur;
-	}
-	
-	public double fahrenheitToKelvin()
-	{
-		double conversion = (this.valeur +459.67) * 5/9;
-		return conversion;
-	}
-	
-	public double fahrenheitToRankine()
-	{
-		double conversion = this.valeur +459.67;
-		return conversion;
-	}
-	//----------------------- CONVERSION FAHRENHEIT -----------------------
-	
-	//----------------------- CONVERSION KELVIN -----------------------
-	public double kelvinToFahrenheit()
-	{
-		double conversion = this.valeur * 9/5 - 459.67;
-		return conversion;
-	}
-	
-	public double kelvinToCelsius()
+	public double kelvinTOcelsius()
 	{
 		double conversion = this.valeur - 273.15;
 		return conversion;
 	}
 	
-	public double kelvinToKelvin()
-	{
-		return valeur;
-	}
-	
-	public double kelvinToRankine()
-	{
-		double conversion = this.valeur * 9/5;
-		return conversion;
-	}
-	//----------------------- CONVERSION KELVIN -----------------------
-	
-	//----------------------- CONVERSION RANKINE -----------------------
-	public double rankineToFahrenheit()
-	{
-		double conversion = this.valeur - 459.67;
-		return conversion;
-	}
-	
-	public double rankineToCelsius()
+	public double rankineTOcelsius()
 	{
 		double conversion = (this.valeur - 491.67) * 5/9;
 		return conversion;
 	}
+	//----------------------- CONVERSION uniteDepart => uniteBase -----------------------
 	
-	public double rankineToKelvin()
-	{
-		double conversion = this.valeur * 5/9;
-		return conversion;
-	}
-	
-	public double rankineToRankine()
+	//----------------------- CONVERSION uniteBase => uniteConversion -----------------------
+	public double celsiusTOcelsius()
 	{
 		return valeur;
 	}
-	//----------------------- CONVERSION RANKINE -----------------------
+	
+	public double celsiusTOfahrenheit()
+	{
+		double conversion = (this.valeur * 9/5) + 32;
+		return conversion;
+	}
+	
+	public double celsiusTOkelvin()
+	{
+		double conversion = this.valeur + 273.15;
+		return conversion;
+	}
+	
+	public double celsiusTOrankine()
+	{
+		double conversion = (this.valeur + 273.15) * 9/5;
+		return conversion;
+	}
+	//----------------------- CONVERSION uniteBase => uniteConversion -----------------------
 }

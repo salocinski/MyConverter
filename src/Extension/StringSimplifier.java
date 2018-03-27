@@ -3,7 +3,7 @@ package Extension;
 public class StringSimplifier
 {
 
-	public String netttoyerChaine(String phrase)
+	public String nettoyerChaine(String phrase)
 	{
 		phrase = phrase.replaceAll("[èéêë]","e");
 		phrase = phrase.replaceAll("[àáâãäå]","a");

@@ -34,6 +34,7 @@ public class Converter extends JFrame
 		fenetre.setSize(450, 450);
 		fenetre.getContentPane().setBackground(Color.BLACK);
 		fenetre.setTitle("MyConverter - Mon convertisseur de données");
+		fenetre.setLocationRelativeTo(null);
 			/*---------- Création de la fenetre ----------*/
 		
 			/*---------- Gestion du titre ----------*/
@@ -63,14 +64,8 @@ public class Converter extends JFrame
 		{
 			listeConversion = (ArrayList<Class>) classe.getClasses("Convertisseur");
 		}
-		catch (ClassNotFoundException e)
-		{
-			e.printStackTrace();
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
+		catch (ClassNotFoundException e){e.printStackTrace();}
+		catch (IOException e){e.printStackTrace();}
 		
 		JComboBox liste = new JComboBox();
 		liste.setPreferredSize(new Dimension(100, 20));
